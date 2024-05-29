@@ -1,0 +1,213 @@
+@import url('https://fonts.googleapis.com/css2?family=Danfo&family=Ubuntu+Sans+Mono:ital,wght@0,400..700;1,400..700&display=swap');
+
+:root{
+  --secondary: #E98A15;
+  --tertiary: #DDEEFF;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  color: white;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: black;
+  border-radius: 10px;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  padding: 0px;
+  margin: 0px;
+}
+
+*{
+  font-family: "Ubuntu Sans Mono", monospace;
+}
+
+h3{
+  border: double black 5px;
+  padding: 10px;
+  width: fit-content;
+}
+
+.container{
+  height: 100%;
+  width: 100%;
+  overflow: auto;
+}
+
+.section-title{
+  transform: translateX(-5px);
+  border-radius: 0px 7px 7px 0px;
+}
+
+.home{
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+  width: 100%;
+  gap: 40px;
+  border-bottom: dashed 2px black;
+}
+
+.home-text{
+  width: 60%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  padding: 25px;
+  text-align: center;
+}
+
+.home-image-container{
+  width: 30%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.surname{
+  color: transparent;
+  -webkit-text-stroke: 2px black;
+}
+
+
+.home-image{
+  height: 500px;
+  box-shadow: 10px 10px black;
+}
+
+.tech-list {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.about{
+  border-bottom: dashed 2px black;
+}
+
+.tech {
+  position: relative;
+}
+
+.tech::after {
+  content: "·";
+  position: absolute;
+  right: -15px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.tech:last-child::after{
+  content: "";
+}
+
+.schools, .work-list{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+}
+
+.school, .work{
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  padding: 25px;
+  text-align: center;
+  width: 50%;
+}
+
+.school-name, .work-name{
+  font-weight: bold;
+}
+
+.work .tech-list{
+  align-self: center;
+}
+
+.project-list{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  padding: 50px;
+  gap: 20px;
+}
+
+.project{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  padding: 25px;
+  text-align: center;
+  width: fit-content;
+  height: fit-content;
+  border: solid black 2px;
+  border-radius: 15px 15px 0px 0px;
+}
+
+.project .buttons{
+  display: flex;
+  flex-direction: row;
+  gap: 15px;
+}
+
+.live, .github{
+  border: solid black 1px;
+  padding: 15px;
+  background-color: white;
+  cursor: pointer;
+  transition-duration: 0.3s;
+}
+
+.live{
+  background-color: black;
+  color: white;
+}
+
+.live:hover{
+  color: black;
+  background-color: white;
+}
+
+.github:hover{
+  color: white;
+  background-color: black;
+}
+
+.fixed{
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  background-color: var(--secondary);
+  border-radius: 10px;
+  padding: 15px;
+  z-index: 9999;
+}
+
+.fixed-title{
+  cursor: pointer;
+  color: white;
+}
+
+.fixed-content{
+  display: none;
+}
+
+.fixed-links img{
+  width: 50px;
+}
