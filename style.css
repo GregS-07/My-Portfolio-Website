@@ -58,7 +58,7 @@ h3{
 
 .home-text{
   width: 60%;
-  height: 100%;
+  height: 90%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -82,10 +82,19 @@ h3{
   -webkit-text-stroke: 2px black;
 }
 
-
 .home-image{
   height: 500px;
-  box-shadow: 10px 10px black;
+  animation: solid-shadow 1s forwards;
+}
+
+@keyframes solid-shadow{
+  0%{
+    box-shadow: 0px 0px black;
+  }
+
+  100%{
+    box-shadow: 10px 10px black;
+  }
 }
 
 .tech-list {
@@ -158,6 +167,7 @@ h3{
   height: fit-content;
   border: solid black 2px;
   border-radius: 15px 15px 0px 0px;
+  box-shadow: 10px 10px black;
 }
 
 .project .buttons{
@@ -179,14 +189,9 @@ h3{
   color: white;
 }
 
-.live:hover{
-  color: black;
-  background-color: white;
-}
-
-.github:hover{
-  color: white;
-  background-color: black;
+.live:hover, .github:hover{
+  transform: translate(-5px, -5px);
+  box-shadow: 4px 4px white, 5px 5px black;
 }
 
 .fixed{
@@ -197,6 +202,19 @@ h3{
   border-radius: 10px;
   padding: 15px;
   z-index: 9999;
+  animation: fade-in-from-left 2s;
+}
+
+@keyframes fade-in-from-left{
+  0%{
+    transform: translateX(-50px);
+    opacity: 0;
+  }
+
+  100%{
+    transform: translate(0px);
+    opacity: 1;
+  }
 }
 
 .fixed-title{
@@ -210,4 +228,30 @@ h3{
 
 .fixed-links img{
   width: 50px;
+}
+
+/* dark mode */
+
+.dark{
+  color: white;
+  background-color: black;
+  border-color: white;
+  transition-duration: 0.5s;
+}
+
+.dark.project{
+  box-shadow: 10px 10px white;
+}
+
+.dark.home-image{
+  box-shadow: 10px 10px white;
+  animation: none;
+}
+
+.dark.fixed, .dark.fixed-title, .dark.fixed-links img, .dark.fixed-content, .dark.fixed-links, .dark.fixed-content p{
+  background-color: rgb(105, 38, 38)
+}
+
+.dark.fixed-links img{
+  fill: white;
 }
