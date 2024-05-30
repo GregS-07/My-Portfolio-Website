@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Danfo&family=Ubuntu+Sans+Mono:ital,wght@0,400..700;1,400..700&display=swap');
 
 :root{
-  --secondary: #E98A15;
+  --secondary: #ffbf70;
   --tertiary: #DDEEFF;
 }
 
@@ -244,9 +244,12 @@ h3{
 }
 
 .fixed-title{
+  background-color: #E98A15;
+  padding: 10px;
+  border-radius: 5px;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
 }
 
 .fixed-content{
@@ -261,7 +264,7 @@ h3{
 }
 
 .arrow{
-  transition-duration: 0.3s;
+  transition-duration: 1s;
 }
 
 .down{
