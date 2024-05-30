@@ -21,6 +21,8 @@ $(document).ready(() => {
     $(".fixed-content").slideToggle("slow");
   });
 
+  $(".fixed-title").trigger("click");
+
   // $(document).on('keypress', function(event) {
   //   if (event.key === 'd' || event.key === 'D') {
   //       $("*").toggleClass("dark")
