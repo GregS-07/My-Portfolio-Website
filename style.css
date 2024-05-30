@@ -6,13 +6,20 @@
 }
 
 ::-webkit-scrollbar {
-  width: 10px;
+  width: 15px;
 }
 
 ::-webkit-scrollbar-track {
-  color: white;
-  border-radius: 10px;
+  background: repeating-linear-gradient(
+    45deg,
+    white 0%,
+    white 2%,
+    black 2%,
+    black 4%
+  );
 }
+
+
 
 ::-webkit-scrollbar-thumb {
   background: black;
@@ -54,6 +61,7 @@ h3{
   width: 100%;
   gap: 40px;
   border-bottom: dashed 2px black;
+  position: relative;
 }
 
 .home-text{
@@ -97,10 +105,22 @@ h3{
   }
 }
 
+
+/* stickman */
+
+.stickman{
+  height: 50px;
+  position: absolute;
+  bottom: 0px;
+}
+
+
 .tech-list {
   display: flex;
   align-items: center;
   gap: 20px;
+  border: solid black 1px;
+  padding: 5px;
 }
 
 .about{
@@ -167,6 +187,11 @@ h3{
   height: fit-content;
   border: solid black 2px;
   border-radius: 15px 15px 0px 0px;
+  transition-duration: 0.3s;
+}
+
+.project:hover{
+  transform: translate(-10px, -10px);
   box-shadow: 10px 10px black;
 }
 
@@ -203,6 +228,32 @@ h3{
   padding: 15px;
   z-index: 9999;
   animation: fade-in-from-left 2s;
+  width: 250px;
+}
+
+.fixed-title{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.fixed-content{
+  text-align: center;
+}
+
+.fixed-links{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+}
+
+.arrow{
+  transition-duration: 0.3s;
+}
+
+.down{
+  transform: rotateX(180deg);
 }
 
 @keyframes fade-in-from-left{
@@ -252,6 +303,3 @@ h3{
   background-color: rgb(105, 38, 38)
 }
 
-.dark.fixed-links img{
-  fill: white;
-}

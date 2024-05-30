@@ -10,9 +10,9 @@
 
 <body>
   <div class="fixed">
-    <p class="fixed-title">Get in touch! ↓</p>
+    <p class="fixed-title">Get in touch! <img class="arrow" src="arrow.svg" alt=""></p>
     <div class="fixed-content">
-      <p>gregsternik07@gmail.com</p>
+      <p>gregsternik07@gmail.com 📧</p>
       <div class="fixed-links">
         <a href="https://www.linkedin.com/in/grzegorz-sternik-55a38829b/?originalSubdomain=uk"><img src="linkedin.svg" alt=""></a>
         <a href="https://github.com/GregS-07"><img src="github.svg" alt=""></a>
@@ -32,15 +32,18 @@
           <span class="tech">JavaScript</span>
           <span class="tech">JQuery</span>
           <span class="tech">SASS/SCCS</span>
-          <span class="tech">Python</span>
+          <span class="tech">Python 🐍</span>
           <span class="tech">SQL</span>
-          <span class="tech">Pandas</span>
+          <span class="tech">Pandas 🐼</span>
           <span class="tech">MatPlotLib</span>
         </div>
       </div>
+      
       <div class="home-image-container">
         <img src="me.jpg" alt="" class="home-image">
       </div>
+
+      <img src="stickman/sitckman0.png" class="stickman" alt="">
     </div>
 
     <div class="about">
@@ -146,6 +149,20 @@
       </div>
     </div>
     
+    <div class="form">
+      <form name="contact" method="POST" data-netlify="true">
+        <label for="email">Email (optional)</label>
+        <input name="email" type="email">
+        
+        <label for="name">What is your name?</label>
+        <input type="text" name="name">
+
+        <label for="message">Enter your message for me:</label>
+        <textarea name="message"></textarea>
+
+        <input type="submit">
+      </form>
+    </div>
   </div>
     
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
