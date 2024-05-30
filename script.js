@@ -64,4 +64,6 @@ $(document).ready(() => {
     $(".stickman").attr("src", "stickman/sitckman" + frameIndex + ".png")
   }, 200)
 
+
+  $(".stickman").draggable();
 })

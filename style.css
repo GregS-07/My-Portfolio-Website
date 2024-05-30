@@ -112,6 +112,14 @@ h3{
   height: 50px;
   position: absolute;
   bottom: 0px;
+  z-index: 1000000;
+  cursor: move; /* fallback if grab cursor is unsupported */
+  cursor: grab;
+}
+
+.stickman:active{
+  cursor: grabbing;
+  transform: scale(1.25);
 }
 
 
