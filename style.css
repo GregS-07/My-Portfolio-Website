@@ -237,25 +237,28 @@ h3{
   position: fixed;
   top: 10px;
   left: 10px;
-  background-color: var(--secondary);
+  background-color: white;
   border-radius: 10px;
-  padding: 15px;
   z-index: 9999;
   animation: fade-in-from-left 2s;
   width: 250px;
+  height: fit-content;
+  border: 1px black solid;
 }
 
 .fixed-title{
-  background-color: #E98A15;
+  background-color: black;
   padding: 10px;
   border-radius: 5px;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  margin: 0px;
 }
 
 .fixed-content{
   text-align: center;
+  padding: 15px;
 }
 
 .fixed-links{
