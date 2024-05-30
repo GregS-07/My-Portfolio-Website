@@ -156,10 +156,10 @@
       <input name="email" type="email">
       
       <label for="name">What is your name?</label>
-      <input type="text" name="name" required>
+      <input maxlength="25" type="text" name="name" required>
 
       <label for="message">Enter your message for me:</label>
-      <textarea name="message" required></textarea>
+      <textarea resize="none" cols="50" rows="10" name="message" maxlength="300" required></textarea>
 
       <input type="submit">
     </form>

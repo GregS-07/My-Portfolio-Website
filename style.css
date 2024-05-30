@@ -320,6 +320,7 @@ input, textarea{
   border: black solid 2px;
   transition-duration: 0.3s;
   padding: 5px;
+  resize: none;
 }
 
 input:focus, textarea:focus{

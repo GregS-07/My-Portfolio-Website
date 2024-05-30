@@ -21,11 +21,11 @@ $(document).ready(() => {
     $(".fixed-content").slideToggle("slow");
   });
 
-  $(document).on('keypress', function(event) {
-    if (event.key === 'd' || event.key === 'D') {
-        $("*").toggleClass("dark")
-    }
-  });
+  // $(document).on('keypress', function(event) {
+  //   if (event.key === 'd' || event.key === 'D') {
+  //       $("*").toggleClass("dark")
+  //   }
+  // });
 
   $.ajax({
     method: 'GET',
