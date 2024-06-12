@@ -21,8 +21,6 @@ $(document).ready(() => {
     $(".fixed-content").slideToggle("slow");
   });
 
-  $(".fixed-title").trigger("click");
-
   $.ajax({
     method: 'GET',
     url: 'https://api.api-ninjas.com/v1/weather?city=' + "Ipswich",
