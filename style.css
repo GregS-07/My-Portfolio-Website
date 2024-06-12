@@ -35,6 +35,7 @@ html, body {
 
 *{
   font-family: "Ubuntu Sans Mono", monospace;
+  box-sizing: border-box;
 }
 
 h2{
@@ -46,7 +47,6 @@ h2{
 .container{
   height: 100%;
   width: 100%;
-  overflow: auto;
 }
 
 .section-title{
@@ -429,10 +429,6 @@ input[type="submit"]{
 
   textarea{
     width: 90%;
-  }
-
-  .container{
-    overflow-x: hidden;
   }
 
   .section-title{
