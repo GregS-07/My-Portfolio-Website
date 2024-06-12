@@ -406,4 +406,13 @@ input[type="submit"]{
   .home{
     padding-top: 50px;
   }
+
+  .home-image{
+    width: 300px;
+    height: auto;
+  }
+
+  .work, .school{
+    width: 90vw;
+  }
 }
