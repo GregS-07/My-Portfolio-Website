@@ -56,8 +56,9 @@ h3{
 
 .home{
   display: flex;
+  align-items: center;
   flex-direction: row;
-  height: 100%;
+  min-height: 100%;
   width: 100%;
   gap: 40px;
   border-bottom: dashed 2px black;
@@ -268,12 +269,44 @@ h3{
   gap: 15px;
 }
 
-.arrow{
+/* .arrow{
   transition-duration: 1s;
 }
 
 .down{
   transform: rotateX(180deg);
+} */
+
+.more {
+  position: relative;
+}
+
+.more::before,
+.more::after {
+  content: "";
+  height: 20px;
+  width: 2px;
+  background-color: white;
+  position: absolute; 
+  right: 20px;
+  top: -10px;
+  transition: transform 1s; /* Ensure transition is smooth */
+}
+
+.more::before {
+  transform: rotate(135deg) translateX(-10px);
+}
+
+.more::after {
+  transform: rotate(45deg) translateX(10px);
+}
+
+.rotate45::before {
+  transform: rotate(40deg);
+}
+
+.rotate45::after {
+  transform: rotate(135deg);
 }
 
 @keyframes fade-in-from-left{
@@ -291,6 +324,10 @@ h3{
 .fixed-title{
   cursor: pointer;
   color: white;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .fixed-content{
@@ -299,28 +336,6 @@ h3{
 
 .fixed-links img{
   width: 50px;
-}
-
-/* dark mode */
-
-.dark{
-  color: white;
-  background-color: black;
-  border-color: white;
-  transition-duration: 0.5s;
-}
-
-.dark.project{
-  box-shadow: 10px 10px white;
-}
-
-.dark.home-image{
-  box-shadow: 10px 10px white;
-  animation: none;
-}
-
-.dark.fixed, .dark.fixed-title, .dark.fixed-links img, .dark.fixed-content, .dark.fixed-links, .dark.fixed-content p{
-  background-color: rgb(105, 38, 38)
 }
 
 form{
@@ -347,4 +362,48 @@ input:focus, textarea:focus{
 
 input[type="submit"]{
   background-color: white;
+}
+
+@media (max-width: 1024px){
+  .home{
+    flex-direction: column;
+  }
+
+  .home-image-container{
+    margin-bottom: 100px;
+  }
+
+  .project-list{
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 800px){
+  .schools, .work-list{
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+@media (max-width: 500px) {
+  .tech-list {
+    max-width: 100%;
+    flex-wrap: wrap;
+    justify-content: center; 
+    text-align: center; 
+  }
+
+  .tech-list .tech {
+    flex: 1 1 auto;
+    min-width: 100px;
+    margin-bottom: 10px;
+  }
+
+  .tech-list .tech::after{
+    content: "";
+  }
+
+  .home{
+    padding-top: 50px;
+  }
 }

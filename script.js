@@ -17,17 +17,11 @@ $(document).ready(() => {
 
   //toggle fixed contact popup
   $(".fixed-title").on("click", () => {
-    $(".arrow").toggleClass("down");
+    $(".more").toggleClass("rotate45");
     $(".fixed-content").slideToggle("slow");
   });
 
   $(".fixed-title").trigger("click");
-
-  // $(document).on('keypress', function(event) {
-  //   if (event.key === 'd' || event.key === 'D') {
-  //       $("*").toggleClass("dark")
-  //   }
-  // });
 
   $.ajax({
     method: 'GET',
@@ -52,6 +46,8 @@ $(document).ready(() => {
         `);
     }
 });
+
+
 
   var frameIndex = 0;
   var frameForwards = 1;
