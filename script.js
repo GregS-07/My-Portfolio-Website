@@ -51,13 +51,13 @@ $(document).ready(() => {
   var frameForwards = 1;
   setInterval(() => {
     if(frameForwards && frameIndex === 2){
-      frameForwards = -1
+      frameForwards = -1;
     }else if(frameIndex === 0){
-      frameForwards = 1
+      frameForwards = 1;
     }
     frameIndex += frameForwards;
-    console.log("running")
-    $(".stickman").attr("src", "stickman/sitckman" + frameIndex + ".png")
+    console.log("running");
+    $(".stickman").attr("src", "stickman/sitckman" + frameIndex + ".png");
   }, 200)
 
 

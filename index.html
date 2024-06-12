@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
   <meta charset="utf-8">
@@ -164,15 +164,16 @@
   <div class="form">
     <form name="contact" method="POST" data-netlify="true">
       <label for="email">Email (optional)</label>
-      <input name="email" type="email">
+      <input name="email" id="email" type="email">
       
       <label for="name">What is your name?</label>
-      <input maxlength="25" type="text" name="name" required>
+      <input maxlength="25" id="name" type="text" name="name" required>
 
       <label for="message">Enter your message for me:</label>
-      <textarea resize="none" cols="50" rows="10" name="message" maxlength="300" required></textarea>
+      <textarea resize="none" id="message" cols="50" rows="10" name="message" maxlength="300" required></textarea>
 
-      <input type="submit">
+      <label for="submit" class="visually-hidden">Send your message to me</label>
+      <input id="submit" type="submit">
     </form>
   </div>
   </div>
