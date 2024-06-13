@@ -57,7 +57,7 @@ $(document).ready(() => {
     }
     frameIndex += frameForwards;
     console.log("running");
-    $(".stickman").attr("src", "stickman/sitckman" + frameIndex + ".png");
+    $(".stickman").attr("src", "images/stickman/sitckman" + frameIndex + ".png");
   }, 200)
 
 
