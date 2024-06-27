@@ -217,6 +217,11 @@ h2{
   transition-duration: 0.3s;
 }
 
+.screenshot{
+  width: 400px;
+  height: 300px;
+}
+
 .project:hover{
   transform: translate(-10px, -10px);
   box-shadow: 10px 10px black;
@@ -448,5 +453,10 @@ input[type="submit"]{
   .section-title{
     margin-top: 75px;
     margin-bottom: 75px;
+  }
+
+  .screenshot{
+    width: 300px;
+    height: 200px;
   }
 }
