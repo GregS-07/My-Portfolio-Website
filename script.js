@@ -1,10 +1,16 @@
-var i = 0;
+var i = 0;  // Frame number
+
+// Profile for typewriter 
 var txt = 'I am a hardworking College student and intern. I practice programming in College, my industry placement and in my spare time. I am an adaptable, quick learner who takes pride in all my work. I am looking for entry level work with a preference for web development but I’m open to other areas.';
-var speed = 50;
+var speed = 50; // Typing speed
 const key = "XqJzc9pMs9kurtjTrcxtdA==Zj1EpfXwrobCK8fX";
 
+
+
+// Only run once page is loaded
 $(document).ready(() => {
 
+  // Typewriter effect
   function typeWriter() {
     if (i < txt.length) {
       $('.profile').append(txt.charAt(i));
@@ -21,9 +27,14 @@ $(document).ready(() => {
     $(".fixed-content").slideToggle("slow");
   });
 
+
+  // Weather in Ipswich using latitude and longitude
+  var lat = 52.0567;
+  var lon = 1.1482;
+
   $.ajax({
     method: 'GET',
-    url: 'https://api.api-ninjas.com/v1/weather?city=' + "Ipswich",
+    url: 'https://api.api-ninjas.com/v1/weather?lat=' + lat + '&lon=' + lon,
     headers: { 'X-Api-Key': key },
     contentType: 'application/json',
     success: function(result) {
@@ -46,7 +57,7 @@ $(document).ready(() => {
 });
 
 
-
+  // Animating stickman
   var frameIndex = 0;
   var frameForwards = 1;
   setInterval(() => {
@@ -60,6 +71,6 @@ $(document).ready(() => {
     $(".stickman").attr("src", "images/stickman/sitckman" + frameIndex + ".png");
   }, 200)
 
-
+  // Making stickman draggable
   $(".stickman").draggable();
 })

@@ -215,11 +215,12 @@ h2{
   border: solid black 2px;
   border-radius: 15px 15px 0px 0px;
   transition-duration: 0.3s;
+  height: fit-content;
 }
 
 .screenshot{
-  width: 400px;
-  height: 300px;
+  width: 360px;
+  height: 280px;
 }
 
 .project:hover{
