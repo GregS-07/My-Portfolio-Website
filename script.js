@@ -6,6 +6,36 @@ var speed = 50; // Typing speed
 const key = "XqJzc9pMs9kurtjTrcxtdA==Zj1EpfXwrobCK8fX";
 
 
+// Pattern Generator
+
+function getRandomInteger(min, max) {
+  min = Math.ceil(min);
+  max = Math.floor(max);
+  return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+
+const cellClasses = ['eclipse', 'circle', 'square', 'semi-left', 'semi-right'];
+const gridClasses = ['grid-2', 'grid-3', 'grid-4', 'grid-5', 'grid-10', 'grid-15']
+const colours = ['yellow', 'green', 'red', 'blue', 'purple', 'orange', 'pink']
+
+let gridClass = ""
+
+function generatePattern() {
+  gridClass = gridClasses[getRandomInteger(0, gridClasses.length - 1)];
+  $(".grid").addClass(gridClass);
+
+  const gridSize = parseInt(gridClass.split("-")[1]) ** 2;
+
+  for (let i = 0; i < gridSize; i++) {
+    const cellClass = cellClasses[getRandomInteger(0, cellClasses.length - 1)];
+
+    const cell = $("<div class=\"cell\"></div>").addClass(cellClass);
+    $(cell).addClass(colours[getRandomInteger(0, colours.length - 1)]);
+
+    $(".grid").append(cell);
+  }
+}
+
 
 // Only run once page is loaded
 $(document).ready(() => {
@@ -73,4 +103,11 @@ $(document).ready(() => {
 
   // Making stickman draggable
   $(".stickman").draggable();
+
+  // on click generate pattern
+  $(".generate").on("click", () => {
+    $(".grid").removeClass(gridClass)
+    $(".cell").remove()
+    generatePattern()
+  })
 })
