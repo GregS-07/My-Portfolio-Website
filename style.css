@@ -424,6 +424,7 @@ input[type="submit"]{
   display: flex;
   flex-direction: column;
   align-items: center;
+  gap: 50px;
   padding-bottom: 50px;
 }
 
@@ -614,4 +615,83 @@ input[type="submit"]{
 
 .pink {
   background-color: pink;
+}
+
+/* ice-cream */
+
+.ice-cream-container {
+  width: 350px;
+  height: 350px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.ice-cream {
+  background: linear-gradient(200deg, white 5%, pink, hotpink 40%);
+  width: 150px;
+  height: 200px;
+  border-radius: 95px 95px 15px 15px;
+  position: relative;
+}
+
+.stick {
+  background-color: sandybrown;
+  background: linear-gradient(180deg, brown, sandybrown);
+  width: 50px;
+  height: 60px;
+  border-radius: 0px 0px 25px 25px;
+}
+
+.eye {
+  width: 15px;
+  height: 15px;
+  border-radius: 100%;
+  background-color: #bc106c;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.pupil{
+  width: 5px;
+  height: 5px;
+  border-radius: 100%;
+  background-color: white;
+  margin-top: 1px;
+}
+
+.eyes {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 60px;
+  position: absolute;
+  width: 150px;
+  top: 100px;
+}
+
+.mouth{
+  width: 60px;
+  height: 30px;
+  background-color: #bc106c;
+  position: absolute;
+  bottom: 40px;
+  left: 45px;
+  border-radius: 25px 25px 50px 50px;
+}
+
+.ice-cream-container{
+  width: fit-content;
+  height: fit-content;
+  border: 2px black solid;
+  border-bottom: none;
+  box-shadow: 5px 5px black;
+}
+
+.ice-cream-title{
+  padding: 10px;
+  border: 2px black solid;
+  border-left: none;
+  border-right: none;
 }
